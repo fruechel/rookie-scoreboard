@@ -1,0 +1,195 @@
+body, h2, h4 {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: #111;
+    color: rgba(255, 255, 255, 0.6);
+    font-size:12px;
+    font-family: Arial, sans;
+}
+header {
+    margin: auto;
+    padding-top: 10px;
+    width: 450px;
+}
+header pre {
+    padding-left: 10px;
+}
+header, thead {
+    color: #00ab00;
+}
+header span, a, h2 {
+    color: #00abab;
+}
+a:hover {
+    text-decoration: none;
+}
+.important, nav a, #challenges a, .first td {
+    color: #FF9808;
+}
+h2 {
+    font-variant: small-caps;
+    font-weight: normal;
+}
+table {
+    border-spacing: 0;
+    width: 100%;
+}
+td {
+    border: 1px dashed rgba(255, 255, 255, 0.15);
+    padding: 5px;
+    border-top: 0;
+}
+tbody tr:hover td {
+    background: rgba(255, 255, 255, 0.05);
+}
+tbody td:not(:first-child) {
+    border-left: 0;
+}
+thead {
+    font-variant: small-caps;
+    font-size: 13px;
+}
+thead td {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+thead td:not(:first-child) {
+    border-left: 0;
+}
+section {
+    float: left;
+    width: 400px;
+    margin-right: 20px;
+}
+section:last-child {
+    margin-right: 0;
+}
+#scoreboard td:first-child {
+    text-align: center;
+    width: 20px;
+}
+#scoreboard td:last-child, #challenges td:last-child {
+    text-align: center;
+    width: 30px;
+}
+#challenges td:nth-child(2) {
+    text-align: center;
+    width: 60px;
+}
+#content {
+    width: 820px;
+    margin: auto;
+    position: relative;
+}
+nav {
+    color: rgba(255, 255, 255, 0.2);
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+nav span {
+    color: rgba(255, 255, 255, 0.6);
+}
+nav a {
+    text-decoration: none;
+}
+fieldset {
+    border: 1px dashed rgba(255, 255, 255, 0.2);;
+    padding: 20px;
+}
+input[type=text], input[type=password], input[type=number], textarea {
+    border: 0;
+    background: transparent;
+    border-bottom: 1px solid #57ff57;
+    outline: 0;
+    padding: 2px;
+    color: rgba(255, 255, 255, 0.8);
+    width: 400px;
+    margin-bottom: 4px;
+}
+input[type=submit], .button {
+    border: 0;
+    padding: 5px 15px;
+    background: #00abab;
+    border-radius: 4px;
+    margin-top: 10px;
+    font-variant: small-caps;
+    cursor: pointer;
+    color: #333;
+    text-decoration: none;
+}
+input[type=submit]:hover, .button:hover {
+    box-shadow: 0px 0px 3px #57ffff;
+}
+.solved {
+    text-decoration: line-through;
+}
+.solved a {
+    color: #666 !important;
+}
+.solved {
+    color: #666 !important;
+}
+.middle {
+    width: 450px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.register {
+    display: block;
+    text-align: right;
+}
+div.main-text {
+    padding: 10px 10px 40px;
+    text-align: justify;
+}
+div.main-text pre {
+    margin-left: -10px;
+}
+div.main-text img {
+    max-width: 100%;
+    background: white;
+}
+h4 {
+    font-size: 10px;
+    font-weight: normal;
+    text-align: right;
+    color: rgba(255, 255, 255, 0.4);;
+}
+p.center {
+    text-align: center;
+}
+.buttons form {
+    display: inline;
+}
+.buttons input, .buttons .button {
+    padding: 0;
+    margin: 0;
+    padding: 0 10px;
+    margin-right: 4px;
+}
+textarea {
+    border: 1px dotted #57ff57;
+    height: 200px;
+}
+.top-button {
+    text-align: right;
+    padding-bottom: 20px;
+}
+.top-button form {
+    display: inline;
+}
+.top-button input[type=submit] {
+    background: #FF9808;
+    border: 0;
+    outline: 0;
+}
+.center {
+    padding: 20px 0;
+}
+.center li {
+    padding: 10px 0;
+}
+/* TODO: Directory Listing dieses Ordners ausschalten. Man kann alle Dateien im
+         Ordner sehen, wenn man ihn direkt aufruft :-/ */
