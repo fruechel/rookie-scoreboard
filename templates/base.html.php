@@ -33,21 +33,8 @@
         </nav>
     <?php endif; ?>
     <header>
-<pre>
-<span>                        _|</span>. 
-<span>                      _/ |</span>|\_ 
-<span>                    _/   |</span>|  \__ 
-<span>                  _/     |</span>|     \__ 
-<span>                 /_______|</span>|________\ 
-<span>==RUHR-UNi======._________</span>__________.============================
-<span> ___  _____ __  |\_____  _</span>_  ______/|\ | |/  ___/| ______|/ ___/
-<span> \  \/  /  |  \ |  |__|  |</span>|  |___|_|| \| || / __ | __  __ \___ \
-<span>  &gt;    &lt;|  |  /_|  |\__  |</span>|  __/|  || .` || |_\ || ___ | |/ \_) |
-<span> / _/\__\____/_____|  |__|</span>|__|  |__||_|\ |\_____/|____\| ||____/
-<span>=\/===================\_ |</span>| _/==========\|BOCHUM!================
-<span>                        \|</span>|/             !             <span class="important"><?=$encode(CTF_NAME)?></span>
-<span>                         !</span>!
-</pre>
+        <p class="fluxfingers">CTF by RUB &amp; <a href="http://www.fluxfingers.net/" target="_blank">FluxFingers</a></p>
+	<div class="important"><?=$encode(CTF_NAME)?></div>
     </header>
     <?=$this->block('content')?>
 </div>

@@ -3,46 +3,85 @@ body, h2, h4 {
     padding: 0;
 }
 body {
-    background: #111;
-    color: rgba(255, 255, 255, 0.6);
-    font-size:12px;
+    background: url('bg.jpg');
+    background-size: cover;
+    color: rgba(255, 255, 255, .8);
+    font-size: 12px;
     font-family: Arial, sans;
 }
 header {
-    margin: auto;
-    padding-top: 10px;
-    width: 450px;
+    z-index: -10;
+    position: relative;
+    width: 100%;
+    height: 170px;
+    background-image: url(isd-logo.png);
+    background-repeat: no-repeat;
+    background-position: center;
 }
-header pre {
-    padding-left: 10px;
+header p {
+    position: absolute;
+    right: 150px;
+    bottom: 5px;
+    color: #fff;
+    font-size: 20px;
+    font-style: italic;
 }
-header, thead {
-    color: #00ab00;
+header .important {
+    color: #fff;
+    background: rgba(255, 255, 255, .2);
+    padding: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    font-size: 10px;
+    position: absolute;
+    left: 140px;
+    width: 62px;
+    text-align: center;
+    top: 0;
+}
+header p a {
+    color: #fff;
+    text-decoration: none;
+}
+header p a:hover {
+    text-decoration: underline;
+}
+thead td {
+    background: #111;
+    color: #fff;
 }
 header span, a, h2 {
-    color: #00abab;
+    color: #fff;
 }
 a:hover {
     text-decoration: none;
 }
 .important, nav a, #challenges a, .first td {
-    color: #FF9808;
+    color: #ff7200;
+    text-decoration: none;
 }
 h2 {
     font-variant: small-caps;
     font-weight: normal;
+}
+legend {
+    background: #111;
+    padding: 3px 10px;
+    border-radius: 3px;
+    border: 1px solid #555;
 }
 table {
     border-spacing: 0;
     width: 100%;
 }
 td {
-    border: 1px dashed rgba(255, 255, 255, 0.15);
+    border: 1px dashed #555;
+    background: #333;
     padding: 5px;
     border-top: 0;
 }
 tbody tr:hover td {
-    background: rgba(255, 255, 255, 0.05);
+    background: #222
 }
 tbody td:not(:first-child) {
     border-left: 0;
@@ -52,7 +91,7 @@ thead {
     font-size: 13px;
 }
 thead td {
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid #555;
 }
 thead td:not(:first-child) {
     border-left: 0;
@@ -83,25 +122,30 @@ section:last-child {
     position: relative;
 }
 nav {
-    color: rgba(255, 255, 255, 0.2);
+    background: #111;
+    padding: 5px 20px;
+    border-radius: 3px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8)
+    color: rgba(255, 255, 255, 0.5);
     position: absolute;
-    left: 20px;
-    top: 20px;
+    right: 0;
+    top: 35px;
 }
 nav span {
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.8);
 }
 nav a {
     text-decoration: none;
 }
 fieldset {
-    border: 1px dashed rgba(255, 255, 255, 0.2);;
+    border: 1px dashed #333;
+    background: #333;
     padding: 20px;
 }
 input[type=text], input[type=password], input[type=number], textarea {
     border: 0;
     background: transparent;
-    border-bottom: 1px solid #57ff57;
+    border-bottom: 1px solid #369dd8;
     outline: 0;
     padding: 2px;
     color: rgba(255, 255, 255, 0.8);
@@ -111,12 +155,12 @@ input[type=text], input[type=password], input[type=number], textarea {
 input[type=submit], .button {
     border: 0;
     padding: 5px 15px;
-    background: #00abab;
+    background: #369dd8;
     border-radius: 4px;
     margin-top: 10px;
     font-variant: small-caps;
     cursor: pointer;
-    color: #333;
+    color: #fff;
     text-decoration: none;
 }
 input[type=submit]:hover, .button:hover {
