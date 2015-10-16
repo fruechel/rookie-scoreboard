@@ -10,6 +10,7 @@ $this->startBlock('content');
             <input type="submit" value="Reset Scoreboard">
         </form>
         <a class="button" href="?p=admin&amp;a=add">New Challenge</a>
+        <a class="button" href="?p=admin&amp;a=reported">View Solves</a>
     </div>
     <table>
         <thead>

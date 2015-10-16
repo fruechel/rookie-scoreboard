@@ -90,6 +90,32 @@ if (!isset($_GET['a'])) {
     redirect_to('?p=admin');
 
 
+} elseif ($_GET['a'] === 'reported') {
+
+
+if (valid_csrf() && strvals_exist($_GET, 'cid', 'uid')) {
+    $db->put(
+        'UPDATE solves SET reported=1 WHERE challenge_id=? AND user_id=?',
+        $_GET['cid'],
+        $_GET['uid']
+    );
+    redirect_to('?p=admin&a=reported');
+}
+
+
+$reported = $db->fetchAll(
+    'SELECT solves.challenge_id, solves.user_id, challenges.title,
+            challenges.ctf, users.name
+        FROM users, solves, challenges
+        WHERE users.id=solves.user_id AND solves.challenge_id=challenges.id
+            AND solves.reported=0'
+);
+echo render('admin_reported.html.php', array(
+    'reported' => $reported,
+    'csrf' => generate_csrftoken()
+));
+
+
 } else {
 
 

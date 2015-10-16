@@ -16,5 +16,6 @@ CREATE TABLE IF NOT EXISTS challenges (
 CREATE TABLE IF NOT EXISTS solves (
     user_id INTEGER,
     challenge_id INTEGER,
+    reported TINYINT DEFAULT 0,
     PRIMARY KEY (user_id, challenge_id)
 );
