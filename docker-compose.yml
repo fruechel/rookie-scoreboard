@@ -1,0 +1,17 @@
+rookies:
+  build: .
+  ports:
+    - "8080:8080"
+  links:
+    - postgres
+  environment:
+    PG_DB_ROLE: postgres
+    PG_DB_PASSWORD: foobar
+    PG_DB_HOST: postgres
+    PG_DB_SCHEMA: rookies
+    ADMIN_PW: foobar
+postgres:
+  image: postgres
+  environment:
+    POSTGRES_PASSWORD: foobar
+    POSTGRES_DB: rookies
