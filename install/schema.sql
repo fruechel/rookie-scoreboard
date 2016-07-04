@@ -1,13 +1,13 @@
-CREATE TABLE IF NOT EXISTS users (
-    id INTEGER PRIMARY KEY AUTO_INCREMENT,
+CREATE TABLE IF NOT EXISTS "users" (
+    id SERIAL PRIMARY KEY,
     name VARCHAR(255) UNIQUE,
     pass VARCHAR(255),
-    is_admin TINYINT DEFAULT 0
+    is_admin INTEGER DEFAULT 0
 );
 CREATE TABLE IF NOT EXISTS challenges (
-    id INTEGER PRIMARY KEY AUTO_INCREMENT,
+    id SERIAL PRIMARY KEY,
     title VARCHAR(255),
-    `desc` TEXT,
+    "desc" TEXT,
     flag TEXT,
     points INTEGER,
     ctf VARCHAR(255),

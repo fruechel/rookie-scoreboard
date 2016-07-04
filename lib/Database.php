@@ -7,7 +7,7 @@ class Database
 
     public function __construct($dbhost, $dbname, $dbuser, $dbpass)
     {
-        $this->db = new PDO("mysql:host=$dbhost;dbname=$dbname",
+        $this->db = new PDO("pgsql:host=$dbhost;port=5432;dbname=$dbname",
                             $dbuser, $dbpass);
         $this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $this->db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);

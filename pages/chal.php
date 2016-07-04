@@ -13,7 +13,7 @@ if (!strvals_exist($_GET, 'id')) {
 
 
 $chal = $db->fetch(
-    'SELECT id, title, `desc`, flag, points FROM challenges
+    'SELECT id, title, "desc", flag, points FROM challenges
         WHERE id=? AND ctf=?',
     $_GET['id'],
     CTF_NAME

@@ -26,7 +26,7 @@ if (!isset($_GET['a'])) {
 
 
     $chal = $db->fetch(
-        'SELECT title, `desc`, flag, points FROM challenges
+        'SELECT title, "desc", flag, points FROM challenges
             WHERE id=? AND ctf=?',
         $_GET['id'],
         CTF_NAME
@@ -37,7 +37,7 @@ if (!isset($_GET['a'])) {
     if (valid_csrf()
             && strvals_exist($_POST, 'title', 'desc', 'flag', 'points')) {
         $db->put(
-            'UPDATE challenges SET title=?, `desc`=?, flag=?, points=?
+            'UPDATE challenges SET title=?, "desc"=?, flag=?, points=?
                 WHERE id=?',
             $_POST['title'],
             $_POST['desc'],
@@ -58,7 +58,7 @@ if (!isset($_GET['a'])) {
     if (valid_csrf()
             && strvals_exist($_POST, 'title', 'desc', 'flag', 'points')) {
         $db->put(
-            'INSERT INTO challenges (title, `desc`, flag, points, ctf)
+            'INSERT INTO challenges (title, "desc", flag, points, ctf)
                 VALUES (?, ?, ?, ?, ?)',
             $_POST['title'],
             $_POST['desc'],
